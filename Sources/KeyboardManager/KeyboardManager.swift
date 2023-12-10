@@ -169,8 +169,8 @@ open func bind(inputAccessoryView: UIView, withAdditionalBottomSpace additionalB
     inputAccessoryView.translatesAutoresizingMaskIntoConstraints = false
     constraints = NSLayoutConstraintSet(
         bottom: inputAccessoryView.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: additionalInputViewBottomConstraintConstant()),
-        left: inputAccessoryView.leftAnchor.constraint(equalTo: superview.leftAnchor),
-        right: inputAccessoryView.rightAnchor.constraint(equalTo: superview.rightAnchor)
+        leading: inputAccessoryView.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+        trailing: inputAccessoryView.trailingAnchor.constraint(equalTo: superview.trailingAnchor)
     ).activate()
 
     callbacks[.willShow] = { [weak self] (notification) in

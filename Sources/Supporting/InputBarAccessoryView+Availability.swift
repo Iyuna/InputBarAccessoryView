@@ -76,7 +76,7 @@ extension InputBarAccessoryView {
      ````
      V:|...-(padding.top)-(textViewPadding.top)-[InputTextView]-(textViewPadding.bottom)-[InputStackView.bottom]-...|
 
-     H:|...-[InputStackView.left]-(textViewPadding.left)-[InputTextView]-(textViewPadding.right)-[InputStackView.right]-...|
+     H:|...-[InputStackView.leading]-(textViewPadding.left)-[InputTextView]-(textViewPadding.right)-[InputStackView.trailing]-...|
      ````
 
      */

@@ -9,13 +9,13 @@
 import CoreGraphics
 
 public struct HorizontalEdgePadding {
-    public let left: CGFloat
-    public let right: CGFloat
+    public let leading: CGFloat
+    public let trailing: CGFloat
 
-    public static let zero = HorizontalEdgePadding(left: 0, right: 0)
+    public static let zero = HorizontalEdgePadding(leading: 0, trailing: 0)
 
-    public init(left: CGFloat, right: CGFloat) {
-        self.left = left
-        self.right = right
+    public init(leading: CGFloat, trailing: CGFloat) {
+        self.leading = leading
+        self.trailing = trailing
     }
 }

@@ -115,20 +115,20 @@ open class AttachmentCell: UICollectionViewCell {
     private func setupConstraints() {
         
         containerViewLayoutSet = NSLayoutConstraintSet(
-            top:    containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding.top),
-            bottom: containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding.bottom),
-            left:   containerView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: padding.left),
-            right:  containerView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -padding.right)
+            top:        containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding.top),
+            bottom:     containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding.bottom),
+            leading:    containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding.left),
+            trailing:   containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding.right)
         ).activate()
-        deleteButton.addConstraints(contentView.topAnchor, right: contentView.rightAnchor, widthConstant: 20, heightConstant: 20)
+        deleteButton.addConstraints(contentView.topAnchor, trailing: contentView.trailingAnchor, widthConstant: 20, heightConstant: 20)
     }
     
     private func updateContainerPadding() {
         
         containerViewLayoutSet?.top?.constant = padding.top
         containerViewLayoutSet?.bottom?.constant = -padding.bottom
-        containerViewLayoutSet?.left?.constant = padding.left
-        containerViewLayoutSet?.right?.constant = -padding.right
+        containerViewLayoutSet?.leading?.constant = padding.left
+        containerViewLayoutSet?.trailing?.constant = -padding.right
     }
     
     // MARK: - User Actions

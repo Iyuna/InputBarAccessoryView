@@ -34,15 +34,15 @@ internal extension UIView {
             return
         }
         translatesAutoresizingMaskIntoConstraints = false
-        leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
-        rightAnchor.constraint(equalTo: superview.rightAnchor).isActive = true
+        leadingAnchor.constraint(equalTo: superview.leadingAnchor).isActive = true
+        trailingAnchor.constraint(equalTo: superview.trailingAnchor).isActive = true
         topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
         bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
     }
 
     @discardableResult
-    func addConstraints(_ top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, topConstant: CGFloat = 0, leftConstant: CGFloat = 0, bottomConstant: CGFloat = 0, rightConstant: CGFloat = 0, widthConstant: CGFloat = 0, heightConstant: CGFloat = 0) -> [NSLayoutConstraint] {
-        
+    func addConstraints(_ top: NSLayoutYAxisAnchor? = nil, leading: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, trailing: NSLayoutXAxisAnchor? = nil, topConstant: CGFloat = 0, leadingConstant: CGFloat = 0, bottomConstant: CGFloat = 0, trailingConstant: CGFloat = 0, widthConstant: CGFloat = 0, heightConstant: CGFloat = 0) -> [NSLayoutConstraint] {
+
         if self.superview == nil {
             return []
         }
@@ -56,9 +56,9 @@ internal extension UIView {
             constraints.append(constraint)
         }
         
-        if let left = left {
-            let constraint = leftAnchor.constraint(equalTo: left, constant: leftConstant)
-            constraint.identifier = "left"
+        if let leading = leading {
+            let constraint = leadingAnchor.constraint(equalTo: leading, constant: leadingConstant)
+            constraint.identifier = "leading"
             constraints.append(constraint)
         }
         
@@ -68,9 +68,9 @@ internal extension UIView {
             constraints.append(constraint)
         }
         
-        if let right = right {
-            let constraint = rightAnchor.constraint(equalTo: right, constant: -rightConstant)
-            constraint.identifier = "right"
+        if let trailing = trailing {
+            let constraint = trailingAnchor.constraint(equalTo: trailing, constant: -trailingConstant)
+            constraint.identifier = "trailing"
             constraints.append(constraint)
         }
         

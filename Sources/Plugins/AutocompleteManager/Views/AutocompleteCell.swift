@@ -81,7 +81,7 @@ open class AutocompleteCell: UITableViewCell {
     
     open func setupConstraints() {
         
-        separatorLine.addConstraints(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, heightConstant: 0.5)
+        separatorLine.addConstraints(leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, heightConstant: 0.5)
     }
     
     open override func layoutSubviews() {

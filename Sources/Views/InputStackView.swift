@@ -39,12 +39,12 @@ open class InputStackView: UIStackView {
     
     /// The stack view position in the InputBarAccessoryView
     ///
-    /// - left: Left Stack View
-    /// - right: Bottom Stack View
-    /// - bottom: Left Stack View
+    /// - leading: Leading Stack View
+    /// - trailing: Bottom Stack View
+    /// - bottom: Leading Stack View
     /// - top: Top Stack View
     public enum Position {
-        case left, right, bottom, top
+        case leading, trailing, bottom, top
     }
     
     // MARK: Initialization
